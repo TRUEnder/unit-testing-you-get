@@ -236,6 +236,7 @@ def match1(text, *patterns):
     """
 
     if len(patterns) == 1:
+        print('Asu asu')
         pattern = patterns[0]
         match = re.search(pattern, text)
         if match:
@@ -244,7 +245,9 @@ def match1(text, *patterns):
             return None
     else:
         ret = []
+        print('Hoi', patterns)
         for pattern in patterns:
+            print('Hola', pattern)
             match = re.search(pattern, text)
             if match:
                 ret.append(match.group(1))
